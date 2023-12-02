@@ -1,5 +1,19 @@
 import subprocess
+from PIL import Image
 import os
+
+def resize_watermark(watermark_path, desired_size=(64, 64)):
+    """Resize the watermark image to the desired size."""
+    with Image.open(watermark_path) as img:
+        if img.size != desired_size:
+            img = img.resize(desired_size, Image.ANTIALIAS)
+            img.save(watermark_path)  # Overwrite the original watermark image
+
+# Your watermark image path
+watermark_path = 'pic/wm.png'
+
+# Resize the watermark to 64x64 if necessary
+resize_watermark(watermark_path)
 
 # Set the directory containing your images
 image_directory = 'path/to/your/image/folder'
