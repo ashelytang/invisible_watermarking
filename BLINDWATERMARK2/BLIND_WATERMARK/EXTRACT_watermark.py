@@ -29,6 +29,8 @@
 # # Run the watermark extraction process
 # extract_watermarks(input_folder, output_folder, watermark_shape)
 
+
+fall 2023
 import os
 import cv2
 from blind_watermark import WaterMark
@@ -62,4 +64,7 @@ watermark_shape = (256, 256)  # Example shape, adjust to your watermark's dimens
 
 # Run the watermark extraction process
 extract_watermarks(input_folder, output_folder, watermark_shape)
+
+
+
 
